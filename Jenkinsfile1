@@ -1,0 +1,13 @@
+pipeline {
+agent any
+stages {
+stage ('Suresh') {
+steps { git 'https://github.com/Adhi1296/Maven-Demo.git'}
+}
+stage ('Mahesh'){
+steps { sh label: '', script: 'mvn clean'
+sh label: '', script: 'mvn install'
+}
+}
+}
+}
